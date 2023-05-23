@@ -1,0 +1,32 @@
+.carouselitem {
+  transition: ease all 0.3s;
+  height: 100%;
+  @apply mt-8 mx-2 p-6 relative;
+  .title {
+    @apply flex items-center;
+    transition: ease all 0.3s;
+  }
+  .description {
+    margin-top: 48px;
+    transition: ease all 0.3s;
+  }
+  .background{
+    transition: ease all 0.3s;
+    @apply absolute left-0 right-0 top-0 bottom-0 border-border border rounded-2xl;
+  }
+  @screen lg {
+    &:hover{
+      .title {
+        transform: translateY(-16px);
+      }
+      .description {
+      }
+      .background {
+        transform: scaleY(1.1);
+        border: 1px transparent solid;
+        box-shadow: 0px 10px 104px -1px rgba(25, 21, 58, 0.1);
+      }
+    }
+  }
+
+}

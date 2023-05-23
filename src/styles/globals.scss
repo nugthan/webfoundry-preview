@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    height: 100vh;
+    font-family: 'Silka', sans-serif;
+}
+.orange-underline {
+    @apply underline decoration-orange decoration-4;
+}
+.faq-title {
+    border:none!important;
+}
+.faq-row-wrapper {
+    .faq-title {
+        font-size: 32px;
+        @apply font-semibold mb-4;
+    }
+    .faq-row {
+        @apply border-b border-b-border;
+    }
+    .row-title-text {
+        transition: ease all 0.3s;
+        font-size: 20px;
+        @screen lg {
+            font-size: 24px;
+        }
+    }
+    .row-title:hover {
+        .row-title-text {
+            @apply ml-1;
+        }
+    }
+    .row-title.expanded, .row-title.expanding {
+        .row-title-text {
+            @apply text-orange ml-1;
+        }
+    }
+}
+.row-content-text {
+    color: theme('colors.gray')!important;
+    @apply mb-8 mt-4;
+}
+
+.react-multi-carousel-item {
+    opacity: 0;
+    transition: ease all 0.5s;
+}
+.react-multi-carousel-item--active {
+    opacity: 1;
+}

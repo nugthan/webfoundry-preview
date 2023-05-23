@@ -1,0 +1,53 @@
+.footer {
+  @apply mt-48 py-12 relative;
+  background: radial-gradient(41.85% 503.7% at 0% 0%, #2082D9 0%, #222126 100%);
+  .grain {
+    @apply absolute left-0 top-0 right-0 bottom-0;
+    background-size: cover;
+  }
+  .footercontainer {
+    @apply container relative;
+    color: white;
+  }
+  .title {
+    font-size: 24px;
+    @apply mb-4;
+  }
+  .block {
+    @apply inline-block;
+  }
+  .link {
+    @apply flex items-center cursor-pointer mb-2;
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      @apply mr-3;
+    }
+    .arrow {
+      @apply flex;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      .arrowicon {
+        display: inline-flex;
+        transition: transform .35s ease;
+        transform: rotate(-45deg);
+      }
+      .two {
+        bottom: -100%;
+        left: -100%;
+        position: absolute;
+        transform: translate(0) rotate(-45deg);
+        z-index: 2;
+      }
+    }
+    &:hover {
+      .one {
+        transform: translate(100%, -100%) rotate(-45deg);
+      }
+      .two {
+        transform: translate(100%, -100%) rotate(-45deg);
+      }
+    }
+  }
+}

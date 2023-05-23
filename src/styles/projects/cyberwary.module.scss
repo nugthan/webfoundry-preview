@@ -1,0 +1,33 @@
+.colorgrid {
+  @apply mt-24 grid grid-cols-2 lg:grid-cols-4 gap-4;
+  div {
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+    @screen lg{
+      height: 350px;
+      &:after {
+        content: "";
+        display: block;
+        padding-bottom: 0;
+      }
+    }
+    @apply flex items-end p-4;
+    color: white;
+    font-size: 20px;
+  }
+  div:nth-child(1) {
+    background: linear-gradient(180deg, #1E1D29 0%, #34CC96 100%);
+  }
+  div:nth-child(2) {
+    background: linear-gradient(180deg, #1E1D29 0%, #1B3DF0 100%);
+  }
+  div:nth-child(3) {
+    background: linear-gradient(180deg, #1E1D29 0%, #D06262 100%);
+  }
+  div:nth-child(4) {
+    background: linear-gradient(180deg, #1E1D29 0%, #272727 100%);
+  }
+}

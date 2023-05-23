@@ -1,0 +1,45 @@
+.workitem {
+  @apply rounded-2xl flex h-[275px] overflow-hidden relative;
+  .info {
+    @apply rounded-tl-2xl rounded-bl-2xl flex flex-col;
+    width: 260px;
+    transition: ease all 0.7s;
+  }
+  .imagecontainer {
+    @apply relative w-full h-full rounded-2xl;
+    transition: ease all 0.7s;
+    //transform: translateX(100px);
+  }
+  .content {
+    @apply absolute top-0 p-6;
+    transition: ease all 0.7s;
+  }
+  .cta {
+    @apply absolute bottom-0 flex items-center pb-6 pl-6;
+    z-index: 10;
+    transition: ease all 0.7s;
+  }
+
+  &:hover {
+    .info {
+      //width: 0px;
+    }
+    .content {
+      transform: translateX(16px);
+    }
+    .cta {
+        transform: translateX(16px);
+    }
+
+  }
+
+}
+.projectcover{
+  position: absolute;
+  @apply left-0 right-0 top-0 bottom-0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  opacity: 0.5;
+  mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+}
